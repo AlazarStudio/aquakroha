@@ -36,6 +36,10 @@ a {
     width: 100%;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 /* --------------------------------------- */
 
 header {
@@ -50,20 +54,8 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-}
-
-.layer2 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-}
-
-.layer3 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .header_top {
@@ -75,6 +67,9 @@ header {
 }
 
 .header_top__menu {
+    position: fixed;
+    top: 60px;
+    right: 140px;
     background-color: #7CD1CC;
     width: 80px;
     height: 80px;
@@ -83,6 +78,8 @@ header {
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    z-index: 999;
+    box-shadow: 0 0 10px #00000020;
 }
 
 .header_bottom {
@@ -93,15 +90,18 @@ header {
     padding: 0 100px;
     align-items: center;
     width: 100%;
-    gap: 80px;
 }
 
 .header_bottom__left {
     width: 55%;
 }
 
-.header_bottom__left img{
+.header_bottom__left img {
+    min-width: 360px;
+    max-width: 650px;
     width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 .header_bottom__right {
@@ -138,4 +138,254 @@ header {
     width: 450px;
     text-transform: uppercase;
     cursor: pointer;
+}
+
+/* ------------------------------------ */
+
+.franchise {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin-top: -50px;
+}
+
+.franchise_elem__info {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 55px;
+    gap: 60px;
+    text-transform: uppercase;
+}
+
+.franchise_elem__info___button {
+    text-transform: uppercase;
+    width: 80%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: VAG World;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 40.08px;
+    color: #fff;
+    background-color: #00D3DE;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.franchise_elem__info___title {
+    font-family: VAG World;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 72px;
+    text-align: center;
+    color: #fff;
+}
+
+.franchise_elem {
+    overflow: hidden;
+    border-radius: 50%;
+    width: 360px;
+    height: 360px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.franchise_elem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+}
+
+.element1 {
+    width: 360px;
+    height: 360px;
+    transform: translate(calc(-50% - 625px), calc(-50% - 200px));
+}
+
+.element2 {
+    width: 330px;
+    height: 330px;
+    transform: translate(calc(-50% - 420px), calc(-50% + 400px));
+}
+
+.element3 {
+    width: 450px;
+    height: 450px;
+    transform: translate(calc(-50% - 850px), calc(-50% + 250px));
+}
+
+.element4 {
+    background: #B7F2EF;
+    width: 115px;
+    height: 115px;
+    transform: translate(calc(-50% - 500px), calc(-50% + 100px));
+}
+
+.element5 {
+    background: #B7F2EF;
+    width: 115px;
+    height: 115px;
+    transform: translate(calc(-50% - 950px), calc(-50% - 300px));
+}
+
+.element6 {
+    width: 720px;
+    height: 720px;
+}
+
+.element7 {
+    width: 360px;
+    height: 360px;
+    transform: translate(calc(-50% + 550px), calc(-50% - 300px));
+}
+
+.element8 {
+    width: 360px;
+    height: 360px;
+    transform: translate(calc(-50% + 470px), calc(-50% + 350px));
+}
+
+.element9 {
+    background: #B7F2EF;
+    width: 450px;
+    height: 450px;
+    transform: translate(calc(-50% + 900px), calc(-50% + 250px));
+}
+
+.element10 {
+    background: #7CD1CC;
+    width: 60px;
+    height: 60px;
+    transform: translate(calc(-50% + 600px), calc(-50% + 50px));
+}
+
+.element11 {
+    background: #B7F2EF;
+    width: 115px;
+    height: 115px;
+    transform: translate(calc(-50% + 850px), calc(-50% - 150px));
+}
+
+.element12 {
+    background: #B7F2EF;
+    width: 60px;
+    height: 60px;
+    transform: translate(calc(-50% + 200px), calc(-50% - 420px));
+}
+
+/* ------------------------------------ */
+
+.about {
+    width: 100%;
+    position: relative;
+}
+
+.about_bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.about_info {
+    position: relative;
+    padding: 200px 0;
+}
+
+.about_info__title {
+    width: 100%;
+    text-align: center;
+    font-family: VAG World;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 72px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.about_info__block {
+    display: flex;
+    justify-content: space-between;
+}
+
+.about_info__block___text {
+    font-family: Century Gothic;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 36px;
+    text-align: center;
+    color: #fff;
+}
+
+.about_info__block___img {
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.about_info__block___img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.text_1 {
+    width: 700px;
+    margin-left: 280px;
+    margin-top: 130px;
+}
+
+.img_1 {
+    width: 675px;
+    height: 675px;
+}
+
+.block_2{
+    margin-top: -220px;
+}
+
+.text_2 {
+    width: 820px;
+    margin-right: 500px;
+    margin-top: 200px;
+    order: 2;
+    color: #005A5E;
+}
+
+.img_2 {
+    width: 575px;
+    height: 575px;
+    order: 1;
+    margin-left: -60px;
+}
+
+.text_3 {
+    width: 540px;
+    color: #005A5E;
+    margin-left: -390px;
+    margin-top: 30px;
+}
+
+.img_3 {
+    width: 520px;
+    height: 530px;
+    margin-left: 40px;
+    margin-top: 150px;
+}
+
+.img_4 {
+    width: 670px;
+    height: 670px;
+    margin-top: -90px;
 }
