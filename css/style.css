@@ -447,8 +447,6 @@ header {
 }
 
 
-
-
 .hoverBlock_1 {
     color: rgba(124, 209, 204, 1);
     background-color: rgba(124, 209, 204, 1);
@@ -470,8 +468,6 @@ header {
 .hoverBlock_1:hover .infoBlock_block__top svg .fillChange {
     fill: rgba(24, 209, 204, 1);
 }
-
-
 
 
 .hoverBlock_2 {
@@ -497,8 +493,6 @@ header {
 }
 
 
-
-
 .hoverBlock_3 {
     color: rgba(124, 209, 204, 1);
     background-color: rgba(124, 209, 204, 1);
@@ -520,3 +514,6 @@ header {
 .hoverBlock_3:hover .infoBlock_block__top svg .fillChange {
     fill: rgba(24, 209, 204, 1);
 }
+
+/* ------------------------------------------------ */
+
