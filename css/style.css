@@ -137,4 +137,5 @@ header {
     padding: 10px;
     width: 450px;
     text-transform: uppercase;
+    cursor: pointer;
 }
