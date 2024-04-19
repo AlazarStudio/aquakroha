@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
+}
+
+@font-face {
+    font-family: 'VAG World';
+    src: url('../fonts/VAG World.ttf') format('truetype');
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.centerBlock {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.widthBlock {
+    width: 1300px;
+    height: 100%;
+}
+
+.section {
+    width: 100%;
+}
+
+/* --------------------------------------- */
+
+header {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    padding: 60px 140px;
+}
+
+.layer1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.layer2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.layer3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.header_top {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 999;
+}
+
+.header_top__menu {
+    background-color: #7CD1CC;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.header_bottom {
+    position: relative;
+    margin-top: -130px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 100px;
+    align-items: center;
+    width: 100%;
+    gap: 80px;
+}
+
+.header_bottom__left {
+    width: 55%;
+}
+
+.header_bottom__left img{
+    width: 100%;
+}
+
+.header_bottom__right {
+    width: 45%;
+}
+
+.header_bottom__right {
+    display: flex;
+    flex-direction: column;
+    gap: 55px;
+}
+
+.header_bottom__right___title {
+    font-family: VAG World;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 72px;
+    color: #fff;
+    width: 100%;
+    text-transform: uppercase;
+}
+
+.header_bottom__right___button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: VAG World;
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+    background-color: #7CD1CC;
+    border-radius: 50px;
+    padding: 10px;
+    width: 450px;
+    text-transform: uppercase;
+}

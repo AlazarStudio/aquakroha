@@ -1,0 +1,9 @@
+@media (min-width: 320px) and (max-width: 1299px) {
+    .widthBlock {
+        width: 100%;
+    }
+}
+
+@media (min-width: 425px) and (max-width: 1299px) {
+
+}
