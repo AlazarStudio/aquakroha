@@ -351,7 +351,7 @@ header {
     height: 675px;
 }
 
-.block_2{
+.block_2 {
     margin-top: -220px;
 }
 
@@ -388,4 +388,135 @@ header {
     width: 670px;
     height: 670px;
     margin-top: -90px;
+}
+
+/* ------------------------------------ */
+
+
+.infoBlock {
+    padding: 130px 0;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    gap: 65px;
+}
+
+.infoBlock_block {
+    width: 33%;
+    height: 560px;
+    border-radius: 50px;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.infoBlock_block__bottom {
+    width: 100%;
+    height: calc(100% - 290px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: #fff;
+    font-family: Century Gothic;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 30px;
+    text-align: center;
+}
+
+.infoBlock_block__top {
+    width: 100%;
+    height: 290px;
+    background-color: #fff;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-family: VAG World;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 48px;
+    transition: all 0.3s ease-in-out;
+}
+
+.infoBlock_block__top svg path {
+    transition: all 0.3s ease-in-out;
+}
+
+
+
+
+.hoverBlock_1 {
+    color: rgba(124, 209, 204, 1);
+    background-color: rgba(124, 209, 204, 1);
+}
+
+.hoverBlock_1 .infoBlock_block__top {
+    border: 3px solid rgba(124, 209, 204, 1);
+}
+
+.hoverBlock_1:hover {
+    background-color: rgba(24, 209, 204, 1);
+}
+
+.hoverBlock_1:hover .infoBlock_block__top {
+    border: 3px solid rgba(24, 209, 204, 1);
+    color: rgba(24, 209, 204, 1);
+}
+
+.hoverBlock_1:hover .infoBlock_block__top svg .fillChange {
+    fill: rgba(24, 209, 204, 1);
+}
+
+
+
+
+.hoverBlock_2 {
+    color: rgba(90, 166, 226, 1);
+    background-color: rgba(90, 166, 226, 1);
+}
+
+.hoverBlock_2 .infoBlock_block__top {
+    border: 3px solid rgba(90, 166, 226, 1);
+}
+
+.hoverBlock_2:hover {
+    background-color: rgba(0, 166, 226, 1);
+}
+
+.hoverBlock_2:hover .infoBlock_block__top {
+    border: 3px solid rgba(0, 166, 226, 1);
+    color: rgba(0, 166, 226, 1);
+}
+
+.hoverBlock_2:hover .infoBlock_block__top svg .fillChange {
+    fill: rgba(0, 166, 226, 1);
+}
+
+
+
+
+.hoverBlock_3 {
+    color: rgba(124, 209, 204, 1);
+    background-color: rgba(124, 209, 204, 1);
+}
+
+.hoverBlock_3 .infoBlock_block__top {
+    border: 3px solid rgba(124, 209, 204, 1);
+}
+
+.hoverBlock_3:hover {
+    background-color: rgba(24, 209, 204, 1);
+}
+
+.hoverBlock_3:hover .infoBlock_block__top {
+    border: 3px solid rgba(24, 209, 204, 1);
+    color: rgba(24, 209, 204, 1);
+}
+
+.hoverBlock_3:hover .infoBlock_block__top svg .fillChange {
+    fill: rgba(24, 209, 204, 1);
 }
