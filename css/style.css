@@ -846,7 +846,7 @@ header {
 
 .mainSlider swiper-container {
     width: 100%;
-    height: 100%;   
+    height: 100%;
     --swiper-navigation-color: white;
 }
 
@@ -871,4 +871,90 @@ header {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+/* ----------------------------------- */
+
+.galery {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 30px;
+    margin-top: 80px;
+}
+
+.galery_column {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.galery_column img {
+    cursor: pointer;
+}
+
+.fullWidth {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.halfWidth {
+    width: 47%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.fullscreen-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    visibility: hidden;
+}
+
+.fullscreen-bg img {
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.visible {
+    visibility: visible;
+}
+
+.body-no-scroll {
+    overflow: hidden;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px 10px;
+    font-size: 20px;
+    color: white;
+    background-color: #7CD1CCCC;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.close-btn:hover {
+    background-color: #7CD1CC;
 }

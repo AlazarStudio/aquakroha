@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
-$(document).ready(function() {
+$(document).ready(function () {
   let active_block = null;
 
   $('.blog_info__btns___button').click(function () {
@@ -35,9 +35,9 @@ $(document).ready(function() {
     $('.blog').not(block).css('max-height', '580px');
     $('.blog_info__text').not(textBlock).css('max-height', '360px');
     $('.blog_info__btns___button').not(this).html('Подробнее <img src="refs/Polygon 7.png" alt="">');
-    
+
     if (active_block !== block_id) {
-      block.css('max-height', '2000px'); 
+      block.css('max-height', '2000px');
       textBlock.css('max-height', '2000px');
       $(this).html('Свернуть <img src="refs/Polygon 8.png" alt="">');
       active_block = block_id;
@@ -46,6 +46,42 @@ $(document).ready(function() {
       textBlock.css('max-height', '360px');
       $(this).html('Подробнее <img src="refs/Polygon 7.png" alt="">');
       active_block = null;
+    }
+  });
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+  var images = document.querySelectorAll('.galery img');
+  var fullscreenDiv = document.createElement('div');
+  fullscreenDiv.classList.add('fullscreen-bg', 'hidden');
+
+  var imgTag = document.createElement('img');
+  fullscreenDiv.appendChild(imgTag);
+
+  var closeButton = document.createElement('button');
+  closeButton.textContent = '×';
+  closeButton.classList.add('close-btn');
+  fullscreenDiv.appendChild(closeButton);
+
+  document.body.appendChild(fullscreenDiv);
+
+  images.forEach(function (img) {
+    img.addEventListener('click', function () {
+      imgTag.src = img.src;
+      fullscreenDiv.classList.replace('hidden', 'visible');
+      document.body.classList.add('body-no-scroll');
+    });
+  });
+
+  closeButton.addEventListener('click', function () {
+    fullscreenDiv.classList.replace('visible', 'hidden');
+    document.body.classList.remove('body-no-scroll');
+  });
+
+  fullscreenDiv.addEventListener('click', function (e) {
+    if (e.target === fullscreenDiv) {
+      fullscreenDiv.classList.replace('visible', 'hidden');
+      document.body.classList.remove('body-no-scroll');
     }
   });
 });
