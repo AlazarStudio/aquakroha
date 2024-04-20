@@ -7,7 +7,6 @@ document.addEventListener('DOMContentLoaded', function () {
       var icon = this.querySelector('.accordion-icon img');
       var isExpanded = this.getAttribute('aria-expanded') === 'true';
 
-      // Закрытие всех открытых секций и возврат иконок в исходное состояние
       accButtons.forEach(function (otherBtn) {
         if (otherBtn !== btn) {
           otherBtn.setAttribute('aria-expanded', 'false');
@@ -17,7 +16,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
       });
 
-      // Переключаем состояние aria-expanded, высоту и источник иконки для текущего элемента
       this.setAttribute('aria-expanded', !isExpanded);
       content.style.maxHeight = isExpanded ? '0' : content.scrollHeight + 'px';
       icon.src = isExpanded ? 'refs/akkordion_arrow.png' : 'refs/akkordion_close.png';

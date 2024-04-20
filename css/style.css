@@ -708,6 +708,14 @@ header {
     text-transform: uppercase;
 }
 
+#blog_element__4 .blog_title__name{
+    width: 1300px;
+}
+
+#blog_element__4 .blog_info__text{
+    padding-top: 150px;
+}
+
 .blog_title__img {
     width: 100%;
 }
