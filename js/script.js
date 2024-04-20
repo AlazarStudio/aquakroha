@@ -85,3 +85,25 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 });
+
+$(document).ready(function () {
+  $('#menuButton').click(function () {
+    $('#menu').toggle(300);
+
+    var img = $(this).find('img');
+
+    if (img.attr('src') == 'refs/burger.png') {
+      $('#menuButton').css('transform', 'rotate(-360deg)')
+      
+      setTimeout(function () {
+        img.attr('src', 'refs/closeBurger.png');
+      }, 250)
+    } else {
+      $('#menuButton').css('transform', 'rotate(0deg)')
+
+      setTimeout(function () {
+        img.attr('src', 'refs/burger.png');
+      }, 250)
+    }
+  });
+});

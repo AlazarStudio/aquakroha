@@ -63,7 +63,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 999;
+    z-index: 9999999;
 }
 
 .header_top__menu {
@@ -78,13 +78,14 @@ header {
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    z-index: 999;
-    box-shadow: 0 0 10px #00000020;
+    z-index: 9999999;
+    box-shadow: 0 0 10px #00000040;
+    transition: all 0.5s ease-in-out;
 }
 
 .header_bottom {
     position: relative;
-    margin-top: -130px;
+    margin-top: -70px;
     display: flex;
     justify-content: space-between;
     padding: 0 100px;
@@ -844,13 +845,13 @@ header {
     height: 380px;
 }
 
-.mainSlider swiper-container {
+swiper-container {
     width: 100%;
     height: 100%;
     --swiper-navigation-color: white;
 }
 
-.mainSlider swiper-slide {
+swiper-slide {
     text-align: center;
     font-size: 18px;
     display: flex;
@@ -858,15 +859,18 @@ header {
     align-items: center;
     border-radius: 30px;
     overflow: hidden;
-    transform: scale(0.8);
     transition: all 0.3s ease-in-out;
+}
+
+.mainSlider swiper-slide {
+    transform: scale(0.8);
 }
 
 .mainSlider .swiper-slide-next {
     transform: scale(1);
 }
 
-.mainSlider swiper-slide img {
+swiper-slide img {
     display: block;
     width: 100%;
     height: 100%;
@@ -1175,4 +1179,264 @@ header {
     line-height: 36px;
     background-color: #B7F2EF;
     padding: 10px 30px;
+}
+
+/* -------------------------------------- */
+
+.feedback {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
+.feedback_slider {
+    padding: 50px;
+    background: #B7F2EF;
+    border-radius: 50px;
+}
+
+.feedback_slider swiper-container {
+    --swiper-navigation-color: #B7F2EF;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.feedback_slider swiper-slide {
+    width: 100%;
+    height: 520px;
+    background-color: #fff;
+}
+
+/* ------------------------------------------- */
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
+.form_block {
+    background: #B7F2EF;
+    border-radius: 50px;
+    width: 700px;
+    padding: 75px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form_block>input {
+    width: 100%;
+    height: 48px;
+    padding: 0 20px;
+    font-size: 16px;
+    color: #005A5E;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #fff;
+    outline: none;
+}
+
+.form_block>input::placeholder {
+    color: #005A5E;
+    font-size: 16px;
+}
+
+.form_block textarea {
+    padding: 20px;
+    outline: none;
+    background-color: #fff;
+    border-radius: 30px;
+    resize: vertical;
+    border: none;
+    min-height: 300px;
+}
+
+.form_block textarea::placeholder {
+    color: #005A5E;
+    font-size: 16px;
+}
+
+.form_block label {
+    font-family: Century Gothic;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    display: flex;
+    align-items: flex-start;
+    gap: 25px;
+    color: #005A5E;
+}
+
+.form_block label input {
+    width: 27px;
+    height: 27px;
+}
+
+.form_block label a {
+    font-family: Century Gothic;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 30px;
+    color: #00D3DE;
+}
+
+.form_block button {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 50px;
+    text-transform: uppercase;
+    font-family: VAG World;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 40.08px;
+    color: #7CD1CC;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.form_block button:hover {
+    background-color: #7CD1CC;
+    color: #fff;
+}
+
+/* -------------------------------------- */
+
+.contacts {
+    display: flex;
+    gap: 80px;
+    flex-direction: column;
+}
+
+.contacts_block {
+    padding: 60px 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right top, #00D3DE, #00d3de2c);
+    border-radius: 50px;
+    font-family: VAG World;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 64.13px;
+    gap: 45px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.contacts_block img {
+    width: 86px;
+    height: 86px;
+}
+
+/* ----------------------------------------------- */
+
+footer {
+    margin-top: 80px;
+    background: #7CD1CC;
+    padding: 50px 0;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.footer_line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer_line__element {
+    padding: 15px 30px 10px;
+    text-transform: uppercase;
+    border: 1px solid #fff;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: VAG World;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 40.08px;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+}
+
+.footer_line__element:hover {
+    background-color: #fff;
+    color: #7CD1CC;
+}
+
+.footer_links {
+    display: flex;
+    align-items: center;
+    gap: 70px;
+}
+
+.footer_links__element {
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19.5px;
+    color: #fff;
+    border-bottom: 1px solid transparent;
+    transition: all 0.3s ease-in-out;
+    padding-bottom: 5px;
+}
+
+.footer_links__element:hover {
+    border-bottom: 1px solid #fff;
+}
+
+
+/* ---------------------------------------- */
+
+/* Стили для меню */
+.menu {
+    position: fixed;
+    top: 100px;
+    right: 180px;
+    background: #fff;
+    box-shadow: 0 0 10px #00000040;
+    z-index: 9999;
+    transition: right 0.3s;
+    background: #7CD1CC;
+    border-radius: 30px;
+    padding: 20px 0;
+    overflow: hidden;
+    display: none;
+}
+
+.menu a {
+    display: flex;
+    color: #fff;
+    font-family: VAG World;
+    font-size: 24px;
+    font-weight: 700;
+    padding: 10px 50px;
+    transition: all 0.3 ease-in-out;
+}
+
+.menu a:hover {
+    background-color: #ffffff71;
+}
+
+.show {
+    right: 180px;
+}
+
+#closeButton {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
 }
