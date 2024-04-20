@@ -92,23 +92,39 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 $(document).ready(function () {
-  $('#menuButton').click(function () {
+  $('#menuButton').click(function (event) {
+    event.stopPropagation();
     $('#menu').toggle(300);
 
     var img = $(this).find('img');
 
-    if (img.attr('src') == 'refs/burger.png') {
-      $('#menuButton').css('transform', 'rotate(-360deg)')
-      
+    if (img.attr('src') === 'refs/burger.png') {
+      $(this).css('transform', 'rotate(-360deg)');
+
       setTimeout(function () {
         img.attr('src', 'refs/closeBurger.png');
-      }, 250)
+      }, 250);
     } else {
-      $('#menuButton').css('transform', 'rotate(0deg)')
+      $(this).css('transform', 'rotate(0deg)');
 
       setTimeout(function () {
         img.attr('src', 'refs/burger.png');
-      }, 250)
+      }, 250);
     }
+  });
+
+  $(document).click(function (event) {
+    if (!$(event.target).closest('#menu, #menuButton').length) {
+      $('#menu').hide(300);
+      $('#menuButton').css('transform', 'rotate(0deg)');
+
+      setTimeout(function () {
+        $('#menuButton').find('img').attr('src', 'refs/burger.png');
+      }, 250);
+    }
+  });
+
+  $('#menu').click(function (event) {
+    event.stopPropagation();
   });
 });
