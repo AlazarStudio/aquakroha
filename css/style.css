@@ -602,3 +602,66 @@ header {
     gap: 20px;
     text-indent: 40px;
 }
+
+/* ------------------------------------------- */
+
+.accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.accordion-item {
+    width: 100%;
+    background: #7CD1CC;
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.accordion-button {
+    cursor: pointer;
+    background: #7CD1CC;
+    border: none;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 70px;
+    font-family: Montserrat;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 36px;
+    color: #fff;
+}
+
+.accordion-icon img{
+    transition: all 0.3s ease-in-out;
+}
+
+.accordion-content {
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+    text-align: left;
+    color: #fff;
+    width: 95%;
+    padding-left: 70px;
+    padding-right: 70px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+}
+
+.accordion-content p {
+    padding-bottom: 40px;
+}
+
+.accordion-content .line {
+    width: 100%;
+    border-top: 1px solid #fff;
+    padding-bottom: 40px;
+}
+
+.accordion-button[aria-expanded="true"]+.accordion-content {
+    max-height: 1000px;
+}
