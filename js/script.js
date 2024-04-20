@@ -11,14 +11,19 @@ document.addEventListener('DOMContentLoaded', function () {
         if (otherBtn !== btn) {
           otherBtn.setAttribute('aria-expanded', 'false');
           otherBtn.nextElementSibling.style.maxHeight = '0';
-          otherBtn.querySelector('.accordion-icon img').src = 'refs/akkordion_arrow.png';
+
+          setTimeout(function () {
+            otherBtn.querySelector('.accordion-icon img').src = 'refs/akkordion_arrow.png';
+          }, 100)
           otherBtn.querySelector('.accordion-icon img').style.transform = 'rotate(0deg)';
         }
       });
 
       this.setAttribute('aria-expanded', !isExpanded);
       content.style.maxHeight = isExpanded ? '0' : content.scrollHeight + 'px';
-      icon.src = isExpanded ? 'refs/akkordion_arrow.png' : 'refs/akkordion_close.png';
+      setTimeout(function () {
+        icon.src = isExpanded ? 'refs/akkordion_arrow.png' : 'refs/akkordion_close.png';
+      }, 100)
       icon.style.transform = isExpanded ? 'rotate(0deg)' : 'rotate(270deg)';
     });
   });
