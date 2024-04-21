@@ -130,7 +130,7 @@ $(document).ready(function () {
 });
 
 
-$(document).ready(function() {
+$(document).ready(function () {
   // Функция для проверки видимости элемента на экране
   function checkVisibility(element) {
     var $element = $(element);
@@ -144,33 +144,33 @@ $(document).ready(function() {
 
   // Функция для анимации элементов при скролле
   function animateOnScroll() {
-    $('.itemMove_1').each(function() {
+    $('.itemMove_1').each(function () {
       if (checkVisibility(this) && !$(this).hasClass('is_visible__itemMove_1')) {
         $(this).addClass('is_visible__itemMove_1');
       }
     });
-    $('.itemMove_2').each(function() {
+    $('.itemMove_2').each(function () {
       if (checkVisibility(this) && !$(this).hasClass('is_visible__itemMove_2')) {
         $(this).addClass('is_visible__itemMove_2');
       }
     });
-    $('.itemMove_3').each(function() {
+    $('.itemMove_3').each(function () {
       if (checkVisibility(this) && !$(this).hasClass('is_visible__itemMove_3')) {
         $(this).addClass('is_visible__itemMove_3');
       }
     });
 
-    $('.rightSide_itemMove_1').each(function() {
+    $('.rightSide_itemMove_1').each(function () {
       if (checkVisibility(this) && !$(this).hasClass('is_visible__rightSide_itemMove_1')) {
         $(this).addClass('is_visible__rightSide_itemMove_1');
       }
     });
-    $('.rightSide_itemMove_2').each(function() {
+    $('.rightSide_itemMove_2').each(function () {
       if (checkVisibility(this) && !$(this).hasClass('is_visible__rightSide_itemMove_2')) {
         $(this).addClass('is_visible__rightSide_itemMove_2');
       }
     });
-    $('.rightSide_itemMove_3').each(function() {
+    $('.rightSide_itemMove_3').each(function () {
       if (checkVisibility(this) && !$(this).hasClass('is_visible__rightSide_itemMove_3')) {
         $(this).addClass('is_visible__rightSide_itemMove_3');
       }
@@ -180,4 +180,20 @@ $(document).ready(function() {
   // Вызов функции при скролле и при загрузке страницы
   $(window).on('scroll', animateOnScroll);
   animateOnScroll();
+});
+
+
+$(document).ready(function () {
+  const buttons = document.querySelectorAll('.animateButton');
+  if (buttons) {
+    buttons.forEach(button => {
+      button.addEventListener('mouseenter', () => {
+        button.style.animationPlayState = 'running'; // Запускаем анимацию
+      });
+
+      button.addEventListener('mouseleave', () => {
+        button.style.animationPlayState = 'paused'; // Пауза анимации
+      });
+    });
+  }
 });
