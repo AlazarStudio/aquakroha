@@ -94,7 +94,7 @@ document.addEventListener('DOMContentLoaded', function () {
 $(document).ready(function () {
   $('#menuButton').click(function (event) {
     event.stopPropagation();
-    $('#menu').toggle(300);
+    $('#menu').toggle(500);
 
     var img = $(this).find('img');
 
@@ -115,7 +115,7 @@ $(document).ready(function () {
 
   $(document).click(function (event) {
     if (!$(event.target).closest('#menu, #menuButton').length) {
-      $('#menu').hide(300);
+      $('#menu').hide(500);
       $('#menuButton').css('transform', 'rotate(0deg)');
 
       setTimeout(function () {
@@ -127,4 +127,57 @@ $(document).ready(function () {
   $('#menu').click(function (event) {
     event.stopPropagation();
   });
+});
+
+
+$(document).ready(function() {
+  // Функция для проверки видимости элемента на экране
+  function checkVisibility(element) {
+    var $element = $(element);
+    var windowTop = $(window).scrollTop();
+    var windowBottom = windowTop + $(window).height();
+    var elementTop = $element.offset().top;
+    var elementBottom = elementTop + $element.height();
+
+    return elementBottom <= windowBottom && elementTop >= windowTop;
+  }
+
+  // Функция для анимации элементов при скролле
+  function animateOnScroll() {
+    $('.itemMove_1').each(function() {
+      if (checkVisibility(this) && !$(this).hasClass('is_visible__itemMove_1')) {
+        $(this).addClass('is_visible__itemMove_1');
+      }
+    });
+    $('.itemMove_2').each(function() {
+      if (checkVisibility(this) && !$(this).hasClass('is_visible__itemMove_2')) {
+        $(this).addClass('is_visible__itemMove_2');
+      }
+    });
+    $('.itemMove_3').each(function() {
+      if (checkVisibility(this) && !$(this).hasClass('is_visible__itemMove_3')) {
+        $(this).addClass('is_visible__itemMove_3');
+      }
+    });
+
+    $('.rightSide_itemMove_1').each(function() {
+      if (checkVisibility(this) && !$(this).hasClass('is_visible__rightSide_itemMove_1')) {
+        $(this).addClass('is_visible__rightSide_itemMove_1');
+      }
+    });
+    $('.rightSide_itemMove_2').each(function() {
+      if (checkVisibility(this) && !$(this).hasClass('is_visible__rightSide_itemMove_2')) {
+        $(this).addClass('is_visible__rightSide_itemMove_2');
+      }
+    });
+    $('.rightSide_itemMove_3').each(function() {
+      if (checkVisibility(this) && !$(this).hasClass('is_visible__rightSide_itemMove_3')) {
+        $(this).addClass('is_visible__rightSide_itemMove_3');
+      }
+    });
+  }
+
+  // Вызов функции при скролле и при загрузке страницы
+  $(window).on('scroll', animateOnScroll);
+  animateOnScroll();
 });

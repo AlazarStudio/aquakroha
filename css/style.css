@@ -1440,3 +1440,222 @@ footer {
     font-size: 24px;
     cursor: pointer;
 }
+
+/* ----------------------------------------- */
+
+.franchise_data {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    margin-top: 80px;
+}
+
+.franchise_header {
+    margin-top: 50px;
+}
+
+.franchise_header .header_bottom__right {
+    width: 100%;
+}
+
+.franchise_header .header_bottom__right___title {
+    width: 60%;
+}
+
+.franchise_header__info {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.franchise_header__info____list {
+    font-family: Century Gothic;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 30px;
+    color: #fff;
+}
+
+.franchise_header__info____list p {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.franchise_information {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.franchise_information__item {
+    width: 330px;
+    height: 330px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    color: #fff;
+    background: linear-gradient(to right top, #00D3DE, #7CD1CC);
+    font-family: Century Gothic;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 36px;
+    padding: 40px;
+}
+
+/* ---------------------------------------- */
+
+.offer {
+    width: 100%;
+    background: linear-gradient(to right top, #00D3DE, #7CD1CC);
+    padding: 60px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
+.offer_title {
+    font-family: Century Gothic;
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 48px;
+    text-align: center;
+    color: #fff;
+    width: 40%;
+    text-transform: uppercase;
+}
+
+#animatedBlock {
+    transition: transform 1s;
+    transform: translateX(-100%);
+    /* Стартовая позиция за пределами экрана */
+}
+
+
+.offer_moveElements__item {
+    width: 1251px;
+    height: 360px;
+    padding: 57px 150px;
+    background-image: url('../refs/bg_left.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-family: Century Gothic;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 36px;
+    gap: 25px;
+}
+
+
+.itemMove_1 {
+    transform: translateX(-1200px);
+    z-index: 1;
+    position: relative;
+    transition: transform 0.5s ease-in;
+}
+
+.is_visible__itemMove_1 {
+    opacity: 1;
+    transform: translateX(-176px);
+}
+
+.itemMove_2 {
+    transform: translateX(-1200px);
+    z-index: 2;
+    margin-top: -120px;
+    position: relative;
+    transition:  transform 0.7s ease-in;
+}
+
+.is_visible__itemMove_2 {
+    opacity: 1;
+    transform: translateX(-88px);
+}
+
+.itemMove_3 {
+    transform: translateX(-1200px);
+    z-index: 3;
+    margin-top: -120px;
+    position: relative;
+    transition: transform 1s ease-in;
+}
+
+.is_visible__itemMove_3 {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+
+
+.offer_moveElements__item___title {
+    width: 70%;
+    text-align: right;
+}
+
+.rightSide {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.rightSide .offer_moveElements__item {
+    justify-content: flex-start;
+    background-image: url('../refs/bg_right.svg');
+}
+
+.rightSide .offer_moveElements__item___title {
+    text-align: left;
+}
+
+
+.rightSide_itemMove_1 {
+    transform: translateX(1200px);
+    z-index: 1;
+    position: relative;
+    transition: transform 0.5s ease-in;
+}
+
+.is_visible__rightSide_itemMove_1 {
+    opacity: 1;
+    transform: translateX(176px);
+}
+
+
+.rightSide_itemMove_2 {
+    transform: translateX(1200px);
+    z-index: 2;
+    margin-top: -120px;
+    position: relative;
+    transition: transform 0.7s ease-in;
+}
+
+.is_visible__rightSide_itemMove_2 {
+    opacity: 1;
+    transform: translateX(88px);
+}
+
+
+.rightSide_itemMove_3 {
+    transform: translateX(1200px);
+    z-index: 3;
+    margin-top: -120px;
+    position: relative;
+    transition: transform 1s ease-in;
+}
+
+.is_visible__rightSide_itemMove_3 {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* ----------------------------------- */
+
