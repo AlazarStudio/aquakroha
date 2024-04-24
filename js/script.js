@@ -197,3 +197,21 @@ $(document).ready(function () {
     });
   }
 });
+
+// 
+
+
+// window.addEventListener('scroll', function() {
+//   const scrollY = window.scrollY || window.pageYOffset;
+//   const elementsToAnimate = document.querySelectorAll('.franchise_elem__animate');
+
+//   elementsToAnimate.forEach(element => {
+//       const elementRect = element.getBoundingClientRect();
+//       const windowHeight = window.innerHeight;
+
+//       if (elementRect.top <= windowHeight && elementRect.bottom >= 0) {
+//           const translateY = 100 - scrollY / 2; // Вы можете изменить это значение на ваше усмотрение
+//           element.style.transform = `translateY(calc(-50% - ${translateY}px))`;
+//       }
+//   });
+// });
