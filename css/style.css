@@ -886,15 +886,23 @@ swiper-slide img {
 
 /* ----------------------------------- */
 
-.galery {
+/* .gallery {
   display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 30px;
+  margin-top: 80px;
+} */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   width: 100%;
   gap: 30px;
   margin-top: 80px;
 }
 
-.galery_column {
+.gallery_column {
   width: 50%;
   display: flex;
   justify-content: space-between;
@@ -902,21 +910,23 @@ swiper-slide img {
   flex-wrap: wrap;
 }
 
-.galery_column img {
+.gallery_column img {
   cursor: pointer;
 }
 
 .fullWidth {
-  width: 100%;
-  height: auto;
+  /* width: 100%; */
+  width: 48.35%;
+  height: 380px;
   object-fit: cover;
   border-radius: 50px;
   overflow: hidden;
 }
 
 .halfWidth {
-  width: 47%;
-  height: auto;
+  /* width: 47%; */
+  width: 22.5%;
+  height: 380px;
   object-fit: cover;
   border-radius: 50px;
   overflow: hidden;
