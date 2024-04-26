@@ -359,6 +359,7 @@ header {
 }
 
 .text_1 {
+  text-align: left;
   width: 700px;
   margin-left: 280px;
   margin-top: 130px;
@@ -374,6 +375,7 @@ header {
 }
 
 .text_2 {
+  text-align: left;
   width: 820px;
   margin-right: 500px;
   margin-top: 200px;
@@ -398,8 +400,8 @@ header {
 .img_3 {
   width: 520px;
   height: 530px;
-  margin-left: 40px;
-  margin-top: 175px;
+  margin-left: 10px;
+  margin-top: 150px;
 }
 
 .img_4 {
@@ -1220,8 +1222,44 @@ swiper-slide img {
 
 .feedback_slider swiper-slide {
   width: 100%;
-  height: 520px;
   background-color: #fff;
+}
+
+.feedback_slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px;
+  height: 100%;
+}
+
+.feedback_slide__img {
+  display: flex;
+  align-items: center;
+  width: 200px;
+  min-height: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.feedback_slide__img img {
+  height: 100%;
+}
+
+.feedback_slide__title {
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.feedback_slide__text p {
+  font-size: 16px;
+  font-weight: 400;
+  text-align: justify;
+  text-indent: 30px;
 }
 
 /* ------------------------------------------- */

@@ -1,33 +1,33 @@
-document.addEventListener('DOMContentLoaded', function () {
-  var accButtons = document.querySelectorAll('.accordion .accordion-button');
+// document.addEventListener('DOMContentLoaded', function () {
+//   var accButtons = document.querySelectorAll('.accordion .accordion-button');
 
-  accButtons.forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      var content = this.nextElementSibling;
-      var icon = this.querySelector('.accordion-icon img');
-      var isExpanded = this.getAttribute('aria-expanded') === 'true';
+//   accButtons.forEach(function (btn) {
+//     btn.addEventListener('click', function () {
+//       var content = this.nextElementSibling;
+//       var icon = this.querySelector('.accordion-icon img');
+//       var isExpanded = this.getAttribute('aria-expanded') === 'true';
 
-      accButtons.forEach(function (otherBtn) {
-        if (otherBtn !== btn) {
-          otherBtn.setAttribute('aria-expanded', 'false');
-          otherBtn.nextElementSibling.style.maxHeight = '0';
+//       accButtons.forEach(function (otherBtn) {
+//         if (otherBtn !== btn) {
+//           otherBtn.setAttribute('aria-expanded', 'false');
+//           otherBtn.nextElementSibling.style.maxHeight = '0';
 
-          setTimeout(function () {
-            otherBtn.querySelector('.accordion-icon img').src = 'refs/akkordion_arrow.png';
-          }, 100)
-          otherBtn.querySelector('.accordion-icon img').style.transform = 'rotate(0deg)';
-        }
-      });
+//           setTimeout(function () {
+//             otherBtn.querySelector('.accordion-icon img').src = 'refs/akkordion_arrow.png';
+//           }, 100)
+//           otherBtn.querySelector('.accordion-icon img').style.transform = 'rotate(0deg)';
+//         }
+//       });
 
-      this.setAttribute('aria-expanded', !isExpanded);
-      content.style.maxHeight = isExpanded ? '0' : content.scrollHeight + 'px';
-      setTimeout(function () {
-        icon.src = isExpanded ? 'refs/akkordion_arrow.png' : 'refs/akkordion_close.png';
-      }, 100)
-      icon.style.transform = isExpanded ? 'rotate(0deg)' : 'rotate(270deg)';
-    });
-  });
-});
+//       this.setAttribute('aria-expanded', !isExpanded);
+//       content.style.maxHeight = isExpanded ? '0' : content.scrollHeight + 'px';
+//       setTimeout(function () {
+//         icon.src = isExpanded ? 'refs/akkordion_arrow.png' : 'refs/akkordion_close.png';
+//       }, 100)
+//       icon.style.transform = isExpanded ? 'rotate(0deg)' : 'rotate(270deg)';
+//     });
+//   });
+// });
 
 $(document).ready(function () {
   let active_block = null;

@@ -4,7 +4,7 @@ function getSchema()
     return [
 
         'gallery' => [
-            'menuName' => 'gallery',
+            'menuName' => 'Фото',
             'fields' => [
                 'title' => [
                     'name' => 'Название',
@@ -17,12 +17,13 @@ function getSchema()
                     'element' => 'input',
                     'type' => 'file',
                     'required' => true,
+                    'selectOne' => true,
                 ],
             ],
         ],
 
         'video' => [
-            'menuName' => 'Video',
+            'menuName' => 'Видео',
             'fields' => [
                 'title' => [
                     'name' => 'Название',
@@ -39,7 +40,7 @@ function getSchema()
             ],
         ],
 
-        'comment' => [
+        'feedback' => [
             'menuName' => 'Отзывы',
             'fields' => [
                 'title' => [
@@ -48,9 +49,32 @@ function getSchema()
                     'type' => 'text',
                     'required' => true,
                 ],
-
                 'text' => [
                     'name' => 'Текст отзыва',
+                    'element' => 'textarea',
+                    'type' => 'text',
+                    'required' => true,
+                ],
+                'img' => [
+                    'name' => 'Фото',
+                    'element' => 'input',
+                    'type' => 'file',
+                    'required' => true,
+                ],
+            ],
+        ],
+
+        'faq' => [
+            'menuName' => 'faq',
+            'fields' => [
+                'title' => [
+                    'name' => 'Вопрос',
+                    'element' => 'input',
+                    'type' => 'text',
+                    'required' => true,
+                ],
+                'text' => [
+                    'name' => 'Ответ',
                     'element' => 'textarea',
                     'type' => 'text',
                     'required' => true,

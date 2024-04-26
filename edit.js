@@ -52,7 +52,6 @@ function closePopup() {
 let modal = $(".modal-content").empty();
 
 getData("gallery").then((response) => {
-
   let mass = [];
 
   response.forEach((element) => {
@@ -85,8 +84,6 @@ getData("gallery").then((response) => {
     fullWidthCount++;
   });
 });
-
-// ------------------------------------------------------------------------------------------------
 
 getData("gallery").then((response) => {
   let mass = [];
@@ -124,5 +121,91 @@ getData("gallery").then((response) => {
     }
 
     fullWidthCount++;
+  });
+});
+
+// ------------------------------------------------------------------------------------------------
+
+getData("faq").then((response) => {
+  let block = $(".faq").empty();
+
+  response.forEach((element) => {
+    block.append(`
+      <div class="accordion-item">
+        <button class="accordion-button" id="accordion-button-${element.id}" aria-expanded="false">
+            <span class="accordion-title">
+                ${element.title}
+            </span>
+            <span class="accordion-icon">
+                <img src="refs/akkordion_arrow.png" alt="">
+            </span>
+        </button>
+        <div class="accordion-content">
+            <div class="line"></div>
+            <p>
+                ${element.text}
+            </p>
+        </div>
+      </div>
+    `);
+  });
+
+  initializeAccordion();
+});
+
+function initializeAccordion() {
+  var accButtons = document.querySelectorAll(".accordion .accordion-button");
+
+  accButtons.forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var content = this.nextElementSibling;
+      var icon = this.querySelector(".accordion-icon img");
+      var isExpanded = this.getAttribute("aria-expanded") === "true";
+
+      accButtons.forEach(function (otherBtn) {
+        if (otherBtn !== btn) {
+          otherBtn.setAttribute("aria-expanded", "false");
+          otherBtn.nextElementSibling.style.maxHeight = "0";
+
+          setTimeout(function () {
+            otherBtn.querySelector(".accordion-icon img").src =
+              "refs/akkordion_arrow.png";
+          }, 100);
+          otherBtn.querySelector(".accordion-icon img").style.transform =
+            "rotate(0deg)";
+        }
+      });
+
+      this.setAttribute("aria-expanded", !isExpanded);
+      content.style.maxHeight = isExpanded ? "0" : content.scrollHeight + "px";
+      setTimeout(function () {
+        icon.src = isExpanded
+          ? "refs/akkordion_arrow.png"
+          : "refs/akkordion_close.png";
+      }, 100);
+      icon.style.transform = isExpanded ? "rotate(0deg)" : "rotate(270deg)";
+    });
+  });
+}
+
+getData("feedback").then((response) => {
+  let block = $(".mySwiper").empty();
+
+  response.forEach((element) => {
+    block.append(`
+    <swiper-slide style="height: 500px;">
+      <div class="feedback_slide">
+          <div class="feedback_slide__img">
+              <img src="admin/img/${stringToImageArray(element.img)}" alt="">
+          </div>
+          <div class="feedback_slide__title">
+              ${element.title}
+          </div>
+          <div class="feedback_slide__text">
+              ${element.text}
+          </div>
+      </div>
+    </swiper-slide>
+    `);
   });
 });
