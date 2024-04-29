@@ -7,9 +7,14 @@
     <title>ФРАНШИЗА ДЕТСКИХ БАССЕЙНОВ «АКВАКРОХА»</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
     <link rel="shortcut icon" href="refs/favicon.png" type="image/x-icon">
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/adaptive.css">
     <link rel="stylesheet" href="css/animation.css">
+
 </head>
 
 <body>
@@ -47,11 +52,11 @@
                     <div class="widthBlock">
                         <div class="franchise_header__info">
                             <div class="title">
-                               Наш Блог
+                                Наш Блог
                             </div>
 
                             <div class="anketa_header__desc">
-                                
+
                             </div>
                         </div>
                     </div>
@@ -63,7 +68,7 @@
     <section class="blogSection" style="z-index:1;">
 
         <div class="title blueTitle">
-            
+
         </div>
 
         <div class="centerBlock">
@@ -351,17 +356,25 @@
                 <div id="videoblog"></div>видеоблог
             </div>
 
-            <div class="mainSlider_slider">
-                <swiper-container class="mySwiper" navigation="true" slides-per-view="3" loop="true">
-                    <swiper-slide><img src="refs/slide.png" alt=""></swiper-slide>
-                    <swiper-slide><img src="refs/slide.png" alt=""></swiper-slide>
-                    <swiper-slide><img src="refs/slide.png" alt=""></swiper-slide>
-                    <swiper-slide><img src="refs/slide.png" alt=""></swiper-slide>
-                    <swiper-slide><img src="refs/slide.png" alt=""></swiper-slide>
-                    <swiper-slide><img src="refs/slide.png" alt=""></swiper-slide>
-                    <swiper-slide><img src="refs/slide.png" alt=""></swiper-slide>
-                    <swiper-slide><img src="refs/slide.png" alt=""></swiper-slide>
+            <div class="swiper mainSlider_slider">
+                <swiper-container class="swiper-wrapper mySwiper videoSwiper">
+                    <!-- navigation="true" slides-per-view="3" space-between="30" loop="true" -->
+                    <!-- <swiper-slide>
+                        <iframe src="https://drive.google.com/file/d/1WESggm7hz5_NWRi4tO04Hsf1JC2oG8QN/preview" width="100%" height="100%" allow="autoplay"></iframe>
+                    </swiper-slide>
+
+                    <swiper-slide>
+                        <iframe src="https://drive.google.com/file/d/1WESggm7hz5_NWRi4tO04Hsf1JC2oG8QN/preview" width="640" height="480" allow="autoplay"></iframe>
+                    </swiper-slide> -->
                 </swiper-container>
+                <div class="swiper-pagination"></div>
+
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+              
+                <!-- If we need scrollbar -->
+                <div class="swiper-scrollbar"></div>
             </div>
         </div>
     </section>
@@ -406,6 +419,7 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
     <script src="js/script.js"></script>
     <script type="module" src="edit.js"></script>
+
 </body>
 
 </html>

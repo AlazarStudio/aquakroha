@@ -29,12 +29,12 @@ function getSchema()
                     'name' => 'Название',
                     'element' => 'input',
                     'type' => 'text',
-                    'requery' => false,
+                    'requery' => true,
                 ],
-                'img' => [
+                'text' => [
                     'name' => 'Видео',
                     'element' => 'input',
-                    'type' => 'file',
+                    'type' => 'text',
                     'required' => true,
                 ],
             ],
@@ -65,7 +65,7 @@ function getSchema()
         ],
 
         'faq' => [
-            'menuName' => 'faq',
+            'menuName' => 'Часто задаваемые вопросы',
             'fields' => [
                 'title' => [
                     'name' => 'Вопрос',

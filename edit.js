@@ -189,7 +189,7 @@ function initializeAccordion() {
 }
 
 getData("feedback").then((response) => {
-  let block = $(".mySwiper").empty();
+  let block = $(".feedbackSwiper").empty();
 
   response.forEach((element) => {
     block.append(`
@@ -206,6 +206,22 @@ getData("feedback").then((response) => {
           </div>
       </div>
     </swiper-slide>
+    `);
+  });
+});
+
+getData("video").then((response) => {
+  let block = $(".videoSwiper").empty();
+
+  response.forEach((element) => {
+    block.append(`
+      <swiper-slide>
+        <div class="video_frame">
+          
+            ${element.text}
+          
+        </div>
+      </swiper-slide>
     `);
   });
 });
