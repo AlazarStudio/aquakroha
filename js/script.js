@@ -235,31 +235,17 @@ $(document).ready(function () {
 
 // Get a handle to the player
 
-window.onload = function () {
-  const feedbackSwiper = new Swiper(".feedbackSwiper", {
-    direction: "horizontal",
-    loop: true,
-    spaceBetween: 30,
-    slidesPerView: 3,
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-  });
-};
 
-window.onload = function () {
-  const videoSwiper = new Swiper(".videoSwiper", {
-    direction: "horizontal",
-    loop: true,
-    spaceBetween: 30,
-    slidesPerView: 3,
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    pagination: {
-      el: '.swiper-pagination',
-    },
-  });
-};
+
+// document.addEventListener("DOMContentLoaded", function () {
+//   const videoSwiper = new Swiper(".mainSlider_slider", {
+//     direction: "horizontal",
+//     loop: true,
+//     spaceBetween: 30,
+//     slidesPerView: 3,
+//     navigation: {
+//       nextEl: ".swiper-button-next",
+//       prevEl: ".swiper-button-prev",
+//     },
+//   });
+// });

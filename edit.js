@@ -188,40 +188,57 @@ function initializeAccordion() {
   });
 }
 
+
 getData("feedback").then((response) => {
   let block = $(".feedbackSwiper").empty();
 
   response.forEach((element) => {
     block.append(`
     <swiper-slide style="height: 500px;">
-      <div class="feedback_slide">
-          <div class="feedback_slide__img">
+      <div class="feedback_slide" style="width: 100%;">
+          
               <img src="admin/img/${stringToImageArray(element.img)}" alt="">
-          </div>
-          <div class="feedback_slide__title">
-              ${element.title}
-          </div>
-          <div class="feedback_slide__text">
-              ${element.text}
-          </div>
+          
       </div>
     </swiper-slide>
     `);
   });
 });
 
-getData("video").then((response) => {
-  let block = $(".videoSwiper").empty();
+// getData("feedback").then((response) => {
+//   let block = $(".feedbackSwiper").empty();
 
-  response.forEach((element) => {
-    block.append(`
-      <swiper-slide>
-        <div class="video_frame">
+//   response.forEach((element) => {
+//     block.append(`
+//     <swiper-slide style="height: 500px;">
+//       <div class="feedback_slide">
+//           <div class="feedback_slide__img">
+//               <img src="admin/img/${stringToImageArray(element.img)}" alt="">
+//           </div>
+//           <div class="feedback_slide__title">
+//               ${element.title}
+//           </div>
+//           <div class="feedback_slide__text">
+//               ${element.text}
+//           </div>
+//       </div>
+//     </swiper-slide>
+//     `);
+//   });
+// });
+
+// getData("video").then((response) => {
+//   let block = $(".videoSwiper").empty();
+
+//   response.forEach((element) => {
+//     block.append(`
+//       <swiper-slide style="height: 420px">
+//         <div class="video_frame">
           
-            ${element.text}
+//             ${element.text}
           
-        </div>
-      </swiper-slide>
-    `);
-  });
-});
+//         </div>
+//       </swiper-slide>
+//     `);
+//   });
+// });

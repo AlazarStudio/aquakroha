@@ -7,10 +7,7 @@
     <title>ФРАНШИЗА ДЕТСКИХ БАССЕЙНОВ «АКВАКРОХА»</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
     <link rel="shortcut icon" href="refs/favicon.png" type="image/x-icon">
-    <link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/adaptive.css">
     <link rel="stylesheet" href="css/animation.css">
@@ -40,7 +37,7 @@
                 <a href="gallery.html">Галерея</a>
                 <a href="price.html">Прайс</a>
                 <a href="/#testimonials">Отзывы</a>
-                <a href="/#feedback">Обратная связь</a>
+                <a href="/#feedback">Записаться на пробное занятие</a>
                 <a href="/#contact">Контакты</a>
             </div>
         </div>
@@ -51,7 +48,8 @@
             </div>
             <div class="header_bottom__right">
                 <div class="header_bottom__right___title">Обучение плаванию детей от 0 до 10 лет</div>
-                <div class="header_bottom__right___button animateButton">Записаться на пробное занятие</div>
+                <a href="#feedback" class="header_bottom__right___button animateButton">Записаться на пробное
+                    занятие</a>
             </div>
         </div>
     </header>
@@ -171,7 +169,7 @@
         <div class="centerBlock">
             <div class="widthBlock">
                 <div class="infoBlock">
-                    <a href="#" class="infoBlock_block hoverBlock_1 animateButton">
+                    <div class="infoBlock_block hoverBlock_1 animateButton">
                         <div class="infoBlock_block__top">
                             <svg width="123" height="185" viewBox="0 0 123 185" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -189,9 +187,9 @@
                             проводим
                             тесты и анализы, а также применяем соответствующие методы обработки и очистки воды.
                         </div>
-                    </a>
+                    </div>
 
-                    <a href="#" class="infoBlock_block hoverBlock_2 animateButton">
+                    <div class="infoBlock_block hoverBlock_2 animateButton">
                         <div class="infoBlock_block__top">
                             <svg width="130" height="185" viewBox="0 0 130 185" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -216,9 +214,9 @@
                             Удобное расписание, которое позволит вам посещать занятия в удобное для вас время, а также
                             доступные цены на абонементы и возможность оплаты разовых посещений
                         </div>
-                    </a>
+                    </div>
 
-                    <a href="#" class="infoBlock_block hoverBlock_3 animateButton">
+                    <div class="infoBlock_block hoverBlock_3 animateButton">
                         <div class="infoBlock_block__top">
                             <svg width="150" height="186" viewBox="0 0 150 186" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -269,7 +267,7 @@
                             мастер-классах
                             и других образовательных мероприятиях
                         </div>
-                    </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -383,9 +381,10 @@
                         <div id="testimonials"></div>ОТЗЫВЫ
                     </div>
 
-                    <div class="swiper feedback_slider">
-                        <swiper-container class="swiper-wrapper mySwiper feedbackSwiper">
-                            <!-- <swiper-slide>
+                    <div class="feedback_slider">
+                        <swiper-container class="mySwiper feedbackSwiper" navigation="true" slides-per-view="3"
+                            space-between="30" loop="true">
+                            <swiper-slide>
                                 <div class="feedback_slide">
                                     <div class="feedback_slide__img">
                                         <img src="refs/b3.png" alt="">
@@ -398,10 +397,10 @@
                                         quasi, at odio consequuntur molestias assumenda labore nisi architecto.
                                     </div>
                                 </div>
-                            </swiper-slide> -->
+                            </swiper-slide>
                         </swiper-container>
-
                     </div>
+
                 </div>
             </div>
         </div>
@@ -410,10 +409,10 @@
         <div class="centerBlock">
             <div class="form">
                 <div class="title blueTitle">
-                    <div id="feedback"></div>Обратная связь
+                    <div id="feedback"></div>Записаться на пробное занятие
                 </div>
 
-                <form action="#" method="post" class="form_block">
+                <form action="mail/mail.php" method="post" class="form_block" id="myForm">
                     <input type="text" name="fio" placeholder="ФИО*" required>
                     <input type="text" name="phone" placeholder="Телефон*" required>
                     <input type="text" name="email" placeholder="E-mail*" required>
@@ -421,13 +420,20 @@
                     <textarea name="comment" placeholder="Коментарий"></textarea>
 
                     <label>
-                        <input type="radio" name="check">
+                        <input type="radio" name="check" value="yes">
                         <p>Отправляя форму, я даю согласие на условия <a href="#" target="_blank">договора-оферты</a>.
                         </p>
                     </label>
 
                     <button type="submit" class="animateButton">Отправить </button>
                 </form>
+                <div id="myModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <p>Сообщение успешно отправлено!</p>
+                    </div>
+                </div>
+                
             </div>
         </div>
 
@@ -438,7 +444,7 @@
                     <div id="contact"></div>Контакты
                 </div>
 
-                <a href="#" target="_blank" class="contacts_block animateButton">
+                <a href="https://wa.me/+79887186000" target="_blank" class="contacts_block animateButton">
                     <img src="refs/wa_white.png" alt="">
                     написать в ватсап
                 </a>
@@ -469,8 +475,45 @@
         </div>
     </footer>
 
+    
+<!-- 
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var form = document.getElementById("myForm");
+            form.addEventListener("submit", function(event) {
+                event.preventDefault(); 
+    
+                var formData = new FormData(form);
+                var xhr = new XMLHttpRequest();
+                xhr.open("POST", form.action, true);
+                xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest"); 
+                xhr.onload = function() {
+                    if (xhr.status === 200) {
+                        var response = JSON.parse(xhr.responseText);
+                        if (response.success) {
+                            var modal = document.getElementById("myModal");
+                            modal.style.display = "block";
+                            
+                        } else {
+                            alert("Ошибка: " + response.error);
+                        }
+                    } else {
+                        alert("Ошибка при отправке запроса на сервер");
+                    }
+                };
+                xhr.onerror = function() {
+                    alert("Ошибка при отправке запроса на сервер");
+                };
+                xhr.send(formData);
+            });
+        });
+
+    </script> -->
+
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> -->
     <script src="js/script.js"></script>
     <script type="module" src="edit.js"></script>
 </body>
