@@ -975,7 +975,8 @@ width: 180px;
     transform: translate(calc(0), calc(0)) rotate(990deg);
   }
 } */
- @keyframes main_child_animation {
+
+/* @keyframes main_child_animation {
   0% {
     transform: translate(calc(0), calc(0)) rotate(-2deg);
   }
@@ -1023,4 +1024,4 @@ width: 180px;
 
 .header_bottom__left {
   animation: main_child_animation 4s infinite cubic-bezier(0.23, 0.23, 0.38, 0.42);
-}
+} */
