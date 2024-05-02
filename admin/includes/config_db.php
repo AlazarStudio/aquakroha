@@ -29,7 +29,7 @@ function getSchema()
                     'name' => 'Название',
                     'element' => 'input',
                     'type' => 'text',
-                    'requery' => true,
+                    'requery' => false,
                 ],
                 'text' => [
                     'name' => 'Видео',
@@ -44,16 +44,10 @@ function getSchema()
             'menuName' => 'Отзывы',
             'fields' => [
                 'title' => [
-                    'name' => 'ФИО',
+                    'name' => 'Название',
                     'element' => 'input',
                     'type' => 'text',
-                    'required' => true,
-                ],
-                'text' => [
-                    'name' => 'Текст отзыва',
-                    'element' => 'textarea',
-                    'type' => 'text',
-                    'required' => true,
+                    'required' => false,
                 ],
                 'img' => [
                     'name' => 'Фото',

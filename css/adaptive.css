@@ -1,9 +1,394 @@
-@media (min-width: 320px) and (max-width: 1299px) {
-    .widthBlock {
-        width: 100%;
-    }
+@media (min-width: 320px) and (max-width: 768px) {
+  .franchise {
+    height: 100%;
+  }
+
+  .franchise_elem {
+    display: none;
+  }
+
+  .animateBublesBlock {
+    display: none;
+  }
+
+  .about_bg {
+    display: none;
+  }
+
+  .widthBlock {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .trainingInfo {
+    width: 100%;
+    font-size: 14px;
+    line-height: 21px;
+    padding: 20px;
+  }
+
+  .header_bottom__left {
+    display: none;
+  }
+
+  header {
+    padding: 0;
+  }
+
+  .header_top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+  }
+
+  .header_top__menu {
+    position: unset;
+    width: 60px;
+    height: 60px;
+  }
+
+  .header_top__logo {
+    width: 80px;
+  }
+
+  .header_top__logo img {
+    width: 100%;
+  }
+
+  .menu {
+    width: 280px;
+    right: unset;
+  }
+
+  .menu a {
+    font-size: 16px;
+  }
+
+  .header_bottom {
+    padding: 0;
+  }
+
+  .header_bottom__right {
+    align-items: center;
+    width: 100%;
+    margin-top: 80px;
+  }
+
+  .header_bottom__right___button {
+    width: 300px;
+    font-size: 16px;
+  }
+
+  .header_bottom__right___title {
+    padding: 10px 20px;
+    margin-top: 40px;
+    font-size: 24px;
+    line-height: 42px;
+    text-align: center;
+  }
+
+  .element6 {
+    display: flex;
+    width: 300px;
+    height: 300px;
+  }
+
+  .franchise_elem__info {
+    gap: 10px;
+  }
+
+  .franchise_elem__info___title {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 500;
+  }
+
+  .franchise_elem__info___button {
+    font-size: 16px;
+    line-height: 32px;
+    font-weight: 500;
+  }
+
+  .animateButton {
+    padding: 10px 20px;
+    text-align: center;
+  }
+
+  .accordion-content {
+    padding: 0 20px;
+  }
+
+  .accordion-content .line {
+    padding: 0;
+  }
+
+  .footer_links {
+    flex-direction: column;
+  }
+
+  .footer_line {
+    flex-direction: column;
+  }
+
+  .footer_line__alazar {
+    width: 300px;
+  }
+
+  .footer_line__alazar img {
+    width: 100%;
+  }
+
+  .contacts_block {
+    gap: 20px;
+    padding: 15px;
+    line-height: normal;
+    font-size: 16px;
+  }
+
+  .contacts_block img {
+    font-size: 22px;
+    width: 56px;
+    height: 56px;
+  }
+
+  .title {
+    font-size: 28px;
+    line-height: 36px;
+    color: #005a5e;
+  }
+
+  .fullWidth,
+  .halfWidth {
+    width: 100%;
+  }
+
+  .block_2 {
+    margin: 0;
+  }
+
+  .text_1,
+  .text_2,
+  .text_3,
+  .text_4 {
+    font-size: 14px;
+    width: 100%;
+    margin: 0;
+    text-align: justify;
+    text-indent: 20px;
+    color: #005a5e;
+    line-height: 21px;
+  }
+
+  .text_1 {
+    margin-top: 20px;
+  }
+
+  .about_info {
+    padding: 200px 0 20px 0;
+  }
+
+  .about_info__block {
+    padding: 0 10px;
+  }
+
+  .about_info__block___img {
+    display: none;
+    margin: 0;
+  }
+
+  .infoBlock {
+    flex-direction: column;
+    gap: 25px;
+    padding-top: 40px;
+  }
+
+  .infoBlock_block {
+    width: 100%;
+    height: 420px;
+  }
+
+  .infoBlock_block__top {
+    height: 250px;
+    font-size: 20px;
+  }
+
+  .infoBlock_block__top svg {
+    height: 100px;
+  }
+
+  .infoBlock_block__bottom {
+    height: auto;
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  .trainingBlock {
+    flex-direction: column;
+  }
+
+  .trainingBlock_left {
+    width: 100%;
+    font-size: 14px;
+    line-height: 21px;
+    padding: 0 20px;
+  }
+
+  .trainingBlock_right {
+    width: 100%;
+  }
+
+  .trainingMomInfo {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .accordion-button {
+    font-size: 18px;
+    padding: 20px 40px;
+  }
+
+  .trainingMomInfo_title {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .trainingMomInfo_desc {
+    font-size: 14px;
+    line-height: 21px;
+    gap: 10px;
+  }
+
+  .feedback_slider {
+    padding: 0;
+    background: #fff;
+  }
+
+  .informationBlock {
+    gap: 30px;
+  }
+
+  .feedback {
+    gap: 30px;
+  }
+
+  .form {
+    gap: 30px;
+    padding: 0 20px;
+  }
+
+  .footer_line {
+    gap: 20px;
+  }
+
+  .footer_links {
+    gap: 20px;
+  }
+
+  .franchise_header__info .title {
+    color: #fff !important;
+    font-size: 36px !important;
+  }
+
+  .blog {
+    flex-direction: column !important;
+    max-height: none !important;
+    gap: 0;
+  }
+
+  .blog_title {
+    width: 100%;
+    padding: 0;
+    gap: 0;
+  }
+
+  .blog_info {
+    width: 100%;
+    padding: 10px 10px 25px 10px;
+  }
+
+  .blog_info__text {
+    font-size: 14px;
+    line-height: normal;
+    font-weight: 600;
+    max-height: none;
+    gap: 10px;
+  }
+
+  #blog_element__4 .blog_info__text {
+    padding: 0;
+  }
+
+  .blog_info__btns {
+    flex-direction: column;
+  }
+
+  .blog_info__btns___button {
+    display: none;
+    width: 100%;
+  }
+
+  .blog_info__btns___button_nonChange {
+    width: 100%;
+  }
+
+  .blog_title__name {
+    font-size: 16px;
+  }
+
+  .blog_info__text p {
+    font-size: 14px;
+  }
+
+  /*  */
+
+  .order_normal .blog_title,
+  .order_normal .blog_title {
+    order: 1;
+  }
+
+  .order_normal .blog_info,
+  .order_normal .blog_info {
+    order: 2;
+  }
+
+  .order_rotate .blog_title,
+  .order_rotate .blog_title {
+    order: 1;
+  }
+
+  .order_rotate .blog_info,
+  .order_rotate .blog_info {
+    order: 2;
+  }
+
+  .blogSection {
+    gap: 40px;
+  }
+
+  .mainSlider {
+    padding: 25px 0;
+    gap: 10px;
+  }
+
+  .mainSlider swiper-slide {
+    transform: scale(0.8);
+  }
+
+  .mainSlider .swiper-slide-next {
+    transform: scale(0.8);
+}
+
+.feedback_slide iframe {
+  width: 300px;
+}
+
+.mainSlider {
+  /* display: none; */
+}
+
+  /*  */
 }
 
 @media (min-width: 425px) and (max-width: 1299px) {
-
 }
