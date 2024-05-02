@@ -43,7 +43,8 @@
   }
 
   .header_top__menu {
-    position: unset;
+    top: 10px;
+    right: 10px;
     width: 60px;
     height: 60px;
   }
@@ -243,9 +244,19 @@
     padding: 20px;
   }
 
+  .accordion-item {
+    border-radius: 30px;
+  }
+
+  .accordion-content {
+    font-size: 16px;
+  }
+
   .accordion-button {
     font-size: 18px;
-    padding: 20px 40px;
+    padding: 20px;
+    text-align: left;
+    line-height: 21px;
   }
 
   .trainingMomInfo_title {
